@@ -10,6 +10,16 @@ namespace MenuProgram
     {
         static void Main(string[] args)
         {
+            Menu menu = new Menu("FancyMenu");
+            menu.Add(new MenuItem("Punkt1", "Nice mester"));
+            menu.Add(new MenuItem("Punkt2", "Det er skidt"));
+            Menu underMenu = new Menu("undermenu",
+            new MenuItem("testpunkt", "text1"),
+            new MenuItem("testpunkt2", "text2")
+            );
+            menu.Add(underMenu);
+            menu.Add(new InfiniteMenu());
+            menu.Start();
         }
-    }
+    }
 }
