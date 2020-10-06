@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileSystemMenu.cs" />
     <Compile Include="IMenuItem.cs" />
     <Compile Include="InfiniteMenu.cs" />
     <Compile Include="Menu.cs" />

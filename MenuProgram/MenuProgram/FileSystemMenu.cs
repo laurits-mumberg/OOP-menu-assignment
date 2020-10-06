@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace MenuProgram
 {
     class FileSystemMenu : Menu
     {
-        public FileSystemMenu() : base("test")
-        {
 
+        private DirectoryInfo _directoryInfo;
+
+        public FileSystemMenu(string Title, DirectoryInfo directoryInfo) : base(Title)
+        {
+            _directoryInfo = directoryInfo;
         }
 
         public override void Select()
         {
-            //Adds 5 new infinite menues to this menu, only if it already has 0
             if (MenuItems.Count <= 0)
             {
-                for (int i = 0; i < 6; i++)
+                foreach (string entry in Directory.GetDirectories(_directoryInfo.FullName))
                 {
-                    MenuItems.Add(new InfiniteMenu());
+                    MenuItems.Add(new FileSystemMenu(entry, new DirectoryInfo(entry)));
                 }
             }
             Start();

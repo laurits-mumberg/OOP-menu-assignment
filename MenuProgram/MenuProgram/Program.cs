@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace MenuProgram
 {
@@ -19,6 +20,7 @@ namespace MenuProgram
             );
             menu.Add(underMenu);
             menu.Add(new InfiniteMenu());
+            menu.Add(new FileSystemMenu("Browse my C-Drive", new DirectoryInfo("C:\\")));
             menu.Start();
         }
     }
