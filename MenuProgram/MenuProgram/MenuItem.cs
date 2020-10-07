@@ -31,7 +31,6 @@ namespace MenuProgram
             //Draw content
             Console.Clear();
             Console.WriteLine(Content);
-
         }
 
         private void WaitForBackspace()
