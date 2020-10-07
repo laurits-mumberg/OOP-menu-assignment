@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MenuProgram
 {
@@ -25,15 +23,9 @@ namespace MenuProgram
             MenuItems = menuItems.ToList();
         }
 
-        public virtual void Select()
-        {
-            Start();
-        }
+        public virtual void Select() => Start();
 
-        public void Add(IMenuItem itemToAdd)
-        {
-            MenuItems.Add(itemToAdd);
-        }
+        public void Add(IMenuItem itemToAdd) => MenuItems.Add(itemToAdd);
 
         public void Start()
         {
@@ -49,6 +41,7 @@ namespace MenuProgram
         private void DrawMenu()
         {
             Console.Clear();
+
             for (int i = 0; i < MenuItems.Count; i++)
             {
                 if(i == _selectedItemIndex)
