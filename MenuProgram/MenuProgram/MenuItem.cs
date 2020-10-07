@@ -20,13 +20,13 @@ namespace MenuProgram
             Content = content;
         }
 
-        public void Select()
+        public virtual void Select()
         {
             DrawContent();
             WaitForBackspace();
         }
 
-        private void DrawContent()
+        protected void DrawContent()
         {
             //Draw content
             Console.Clear();

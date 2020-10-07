@@ -21,7 +21,11 @@ namespace MenuProgram
             menu.Add(underMenu);
             menu.Add(new InfiniteMenu());
             menu.Add(new FileSystemMenu("Browse my C-Drive", new DirectoryInfo("C:\\")));
-            menu.Start();
+            menu.Add(new RSSMenu("Dota 2 News", "https://blog.dota2.com/feed/"));
+            menu.Add(new RSSMenu("DR Nyheder", "https://www.dr.dk/nyheder/service/feeds/allenyheder"));
+            menu.Start();
+
         }
-    }
+    }
+
 }
