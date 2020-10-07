@@ -42,7 +42,8 @@ namespace MenuProgram
             {
                 DrawMenu();
                 HandleInput();
-            } while (_running);
+            } while (_running);
+
         }
 
         private void DrawMenu()
