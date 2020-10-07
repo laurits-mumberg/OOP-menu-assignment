@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
+﻿using System.IO;
 
 namespace MenuProgram
 {
@@ -14,9 +9,10 @@ namespace MenuProgram
             Menu menu = new Menu("FancyMenu");
             menu.Add(new MenuItem("Punkt1", "Nice mester"));
             menu.Add(new MenuItem("Punkt2", "Det er skidt"));
+
             Menu underMenu = new Menu("undermenu",
-            new MenuItem("testpunkt", "text1"),
-            new MenuItem("testpunkt2", "text2")
+                new MenuItem("testpunkt", "text1"),
+                new MenuItem("testpunkt2", "text2")
             );
             menu.Add(underMenu);
             menu.Add(new InfiniteMenu());
@@ -24,7 +20,6 @@ namespace MenuProgram
             menu.Add(new RSSMenu("Dota 2 News", "https://blog.dota2.com/feed/"));
             menu.Add(new RSSMenu("DR Nyheder", "https://www.dr.dk/nyheder/service/feeds/allenyheder"));
             menu.Start();
-
         }
     }
 
