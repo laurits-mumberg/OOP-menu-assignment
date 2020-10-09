@@ -37,7 +37,7 @@ namespace MenuProgram
             } while (_running);
 
         }
-
+        //This draws the menu
         private void DrawMenu()
         {
             Console.Clear();
