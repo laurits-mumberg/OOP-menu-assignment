@@ -29,6 +29,7 @@ namespace MenuProgram
 
         public void Start()
         {
+            //While _running is true, the menu will be rendered
             _running = true;
             do
             {
