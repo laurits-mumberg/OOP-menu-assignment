@@ -53,7 +53,7 @@ namespace MenuProgram
             {
                 if(i == _selectedItemIndex)
                 {
-                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine(MenuItems[i].Title);
                 }
