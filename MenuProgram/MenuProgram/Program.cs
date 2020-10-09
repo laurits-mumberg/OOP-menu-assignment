@@ -16,6 +16,7 @@ namespace MenuProgram
             );
             menu.Add(underMenu);
             menu.Add(new InfiniteMenu());
+            menu.Add(new InfiniteMenu());
             menu.Add(new FileSystemMenu("Browse my C-Drive", new DirectoryInfo("C:\\")));
             // TO DO Naxiel twitter
             menu.Add(new RSSMenu("Dota 2 News", "https://blog.dota2.com/feed/"));
