@@ -19,6 +19,7 @@ namespace MenuProgram
             menu.Add(new FileSystemMenu("Browse my C-Drive", new DirectoryInfo("C:\\")));
             menu.Add(new RSSMenu("Dota 2 News", "https://blog.dota2.com/feed/"));
             menu.Add(new RSSMenu("DR Nyheder", "https://www.dr.dk/nyheder/service/feeds/allenyheder"));
+            //TODO ADD TV2NORD gamelab episoden
             menu.Start();
         }
     }
