@@ -85,6 +85,9 @@ namespace MenuProgram
                     MenuItems[_selectedItemIndex].PrevMenuItem = this;
                     MenuItems[_selectedItemIndex].Select();
                     break;
+                case ConsoleKey.A:
+                    Console.WriteLine("Laurits er en mand");
+                    break;
                 default:
                     break;
             }
