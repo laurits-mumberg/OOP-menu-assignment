@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Threading;
 
 namespace MenuProgram
 {
@@ -16,9 +18,18 @@ namespace MenuProgram
         {
             if (MenuItems.Count <= 0)
             {
-                foreach (string entry in Directory.GetDirectories(_directoryInfo.FullName))
+                try
                 {
-                    MenuItems.Add(new FileSystemMenu(entry, new DirectoryInfo(entry)));
+                    foreach (string entry in Directory.GetDirectories(_directoryInfo.FullName))
+                    {
+                        MenuItems.Add(new FileSystemMenu(entry, new DirectoryInfo(entry)));
+                    }
+                }
+                catch(UnauthorizedAccessException ex)
+                {
+                    Console.WriteLine("Unauthorized Access\n");
+                    Thread.Sleep(3000); // wait 3 seconds
+                    PrevMenuItem.Select();
                 }
             }
             Start();
