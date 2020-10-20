@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="FileSystemMenu.cs" />
     <Compile Include="IMenuItem.cs" />
+    <Compile Include="LinkMenuItem.cs" />
     <Compile Include="SurpriseMenu.cs" />
     <Compile Include="InfiniteMenu.cs" />
     <Compile Include="Menu.cs" />
